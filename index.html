@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Application tâche</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <h1>Ajouter une tâche</h1>
+    <form id="form">
+        <input type="text" id="task" placeholder="Nom de la tâche" />
+        
+        <button type="submit">Ajouter</button>
+    </form>
+
+    <h2>Liste des tâches</h2>
+    <ul id="list"></ul>
+    
+    
+
+    <script type="module" src="model.js"></script>
+    <script type="module" src="view.js"></script>
+    <script type="module" src="controller.js"></script>
+  </body>
+</html>
