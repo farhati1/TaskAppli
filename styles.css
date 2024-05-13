@@ -1,7 +1,5 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 html {
@@ -21,8 +19,7 @@ form {
   margin-bottom: 2rem;
 }
 
-[type="text"],
-button {
+[type="text"], select, button {
   display: inline-block;
   padding: .5rem 1rem;
   font-size: 1rem;
@@ -38,12 +35,11 @@ button {
   margin: 0 .5rem;
 }
 
-[type="text"] {
+[type="text"], select {
   width: 100%;
 }
 
-[type="text"]:active,
-[type="text"]:focus {
+[type="text"]:active, [type="text"]:focus, select:active, select:focus {
   outline: 0;
   border: 2px solid #007bff;
 }
@@ -85,7 +81,7 @@ li span:hover {
 li span:focus {
   outline: 0;
   border: 2px solid #007bff;
-  background: rgba(179, 207, 255, 0.52)
+  background: rgba(179, 207, 255, 0.52);
 }
 
 /* Styles pour la checkbox du formulaire */
@@ -106,4 +102,22 @@ li [type="checkbox"] {
   margin-right: 1rem;
   font-size: 1.5rem; /* Taille plus petite pour les tâches */
   vertical-align: middle;
+}
+
+/* Styles pour le filtre de catégorie */
+#categoryFilter {
+  margin-bottom: 2rem;
+}
+
+/* Couleurs pour les différentes catégories de tâches */
+li[data-category="travail"] {
+  color: red;
+}
+
+li[data-category="maison"] {
+  color: blue;
+}
+
+li[data-category="divers"] {
+  color: green;
 }

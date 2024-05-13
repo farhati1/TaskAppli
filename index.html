@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,19 +14,34 @@
     <div id="root"></div>
 
     <h1>Ajouter une tâche</h1>
-    <form id="form">
-        <input type="text" id="task" placeholder="Nom de la tâche" />
-        
-        <button type="submit">Ajouter</button>
+    <form id="form" class="task-form">
+      <input type="text" id="task" class="task-input" placeholder="Nom de la tâche" />
+      <select id="category" class="category-select"> 
+          <option value="travail">Travail</option>
+          <option value="maison">Maison</option>
+          <option value="divers">Divers</option>
+      </select>
+      <select id="type" class="type-select"> 
+          <option value="normal">Normal</option>
+          <option value="important">Important</option>
+          <option value="urgent">Urgent</option>
+      </select>
+      <button type="submit" class="submit-button">Ajouter</button>
     </form>
-
-    <h2>Liste des tâches</h2>
-    <ul id="list"></ul>
     
+    <h2 class="filter-title">Filtrer par catégorie</h2>
+    <select id="categoryFilter" class="category-filter">
+        <option value="all">Toutes</option>
+        <option value="travail">Travail</option>
+        <option value="maison">Maison</option>
+        <option value="divers">Divers</option>
+    </select>
     
-
+    <h2 class="task-list-title">Liste des tâches</h2>
+    <ul id="list" class="task-list"></ul>
+    
     <script type="module" src="model.js"></script>
     <script type="module" src="view.js"></script>
     <script type="module" src="controller.js"></script>
-  </body>
+    </body>
 </html>
